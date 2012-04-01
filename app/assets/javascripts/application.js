@@ -34,7 +34,3 @@ function addOne(lat, lng, heading, pitch, zoom) {
   var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
   map.setStreetView(panorama);
 }
-
-$(function() {
-  addOne("36.926679", "14.735641", "111.17", "1.76", "0");
-});

@@ -1,2 +1,11 @@
 #map
 #pano
+
+:javascript
+  $(function() {
+    var destinations = '#{destinations}';
+    $.each(JSON.parse(destinations), function(i, destination) {
+      console.log(destination);
+    });
+    addOne("19.031065", "-98.135995", "328.49", "-15.45", "1");
+  });

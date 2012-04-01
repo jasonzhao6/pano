@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120331224431) do
+ActiveRecord::Schema.define(:version => 20120401005410) do
 
   create_table "destinations", :force => true do |t|
     t.datetime "created_at"
@@ -26,5 +26,8 @@ ActiveRecord::Schema.define(:version => 20120331224431) do
     t.string   "state"
     t.string   "country"
   end
+
+  add_index "destinations", ["country"], :name => "country_idx"
+  add_index "destinations", ["pano_id"], :name => "pano_id_idx", :unique => true
 
 end
