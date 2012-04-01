@@ -8,29 +8,41 @@
 //= require jquery_ujs
 //= require_tree .
 
-function addOne(lat, lng, heading, pitch, zoom) {
-  lat = parseFloat(lat);
-  lng = parseFloat(lng);
-  heading = parseFloat(heading);
-  pitch = parseFloat(pitch);
-  zoom = parseFloat(zoom);
+function addDestiantion(i, destination) {
+  i++;
+  var lat = parseFloat(destination.latitude);
+  var lng = parseFloat(destination.longitude);
+  var heading = parseFloat(destination.heading);
+  var pitch = parseFloat(destination.pitch);
+  var zoom = parseInt(destination.zoom);
+  
+  $('#heading' + i).text(destination.state);
+  
   var latLng = new google.maps.LatLng(lat, lng);
   var mapOptions = {
     center: latLng,
-    zoom: 5,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    disableDefaultUI: true,
+    zoom: 4,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    streetViewControl: true,
+    zoomControl: true
   };
-  var map = new google.maps.Map(
-    document.getElementById('map'), mapOptions
-  );
   var panoramaOptions = {
+    addressControl: false,
+    clickToGo: false,
+    imageDateControl: false,
+    linksControl: false,
+    panControl: false,
     position: latLng,
     pov: {
       heading: heading,
       pitch: pitch,
       zoom: zoom
-    }
+    },
+    scrollwheel: false,
+    zoomControl: false
   };
-  var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+  var map = new google.maps.Map(document.getElementById('map' + i), mapOptions);
+  var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano' + i), panoramaOptions);
   map.setStreetView(panorama);
 }

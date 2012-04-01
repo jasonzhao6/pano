@@ -6,15 +6,27 @@
  *= require_tree . 
 */
 
-#map {
-  border: 1px solid red;
-  display: inline-block;
-  height: 300px;
-  width: 400px;
+.center {
+  margin: 20px auto 0;
+  width: 1070px;
 }
-#pano {
-  border: 1px solid red;
+.heading {
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.destination {
+  overflow: hidden;
+}
+.map, .pano {
   display: inline-block;
   height: 300px;
-  width: 400px;
+  margin-bottom: 20px;
+}
+.map {
+  width: 320px;
+}
+.pano {
+  margin-left: 15px;
+  width: 730px;
 }

@@ -1,11 +1,14 @@
-#map
-#pano
+.center
+  - (1..Destination::PER_PAGE).each do |i|
+    .destination
+      .heading{id: "heading#{i}"}
+      .map{id: "map#{i}"}
+      .pano{id: "pano#{i}"}
 
 :javascript
   $(function() {
     var destinations = '#{destinations}';
     $.each(JSON.parse(destinations), function(i, destination) {
-      console.log(destination);
+      addDestiantion(i, destination)
     });
-    addOne("19.031065", "-98.135995", "328.49", "-15.45", "1");
   });
