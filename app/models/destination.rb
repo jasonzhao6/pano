@@ -1,8 +1,6 @@
 class Destination < ActiveRecord::Base
+  scope :for_js, select: [:latitude, :longitude, :heading, :pitch, :zoom, :city, :state, :country], order: 'latitude DESC'
   
-  PER_PAGE = 10
-  
-  default_scope order: 'latitude DESC'
-  scope :for_js, select: [:latitude, :longitude, :heading, :pitch, :zoom, :city, :state, :country]
+  self.per_page = 10
   
 end

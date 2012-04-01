@@ -6,12 +6,14 @@
  *= require_tree . 
 */
 
+body {
+  font-family: Arial, sans-serif;
+}
 .center {
   margin: 20px auto 0;
   width: 1070px;
 }
 .heading {
-  font-family: Arial, sans-serif;
   font-size: 2em;
   margin-bottom: 10px;
 }
@@ -29,4 +31,14 @@
 .pano {
   margin-left: 15px;
   width: 730px;
+}
+#pagination {
+  margin-bottom: 20px;
+  text-align: center;
+}
+#pagination a, #pagination em {
+  display: inline-block;
+  font-size: 2em;
+  text-decoration: none;
+  width: 30px;
 }
