@@ -5,3 +5,16 @@
  *= require_self
  *= require_tree . 
 */
+
+#map {
+  border: 1px solid red;
+  display: inline-block;
+  height: 300px;
+  width: 400px;
+}
+#pano {
+  border: 1px solid red;
+  display: inline-block;
+  height: 300px;
+  width: 400px;
+}
