@@ -22,7 +22,7 @@ function addDestiantion(i, destination) {
   var mapOptions = {
     center: latLng,
     disableDefaultUI: true,
-    zoom: 4,
+    zoom: 6,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     streetViewControl: true,
     zoomControl: true
@@ -40,7 +40,7 @@ function addDestiantion(i, destination) {
       zoom: zoom
     },
     scrollwheel: false,
-    zoomControl: false
+    zoomControl: true
   };
   var map = new google.maps.Map(document.getElementById('map' + i), mapOptions);
   var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano' + i), panoramaOptions);
