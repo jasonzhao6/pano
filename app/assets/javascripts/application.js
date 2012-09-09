@@ -5,7 +5,6 @@
 // the compiled file.
 //
 //= require jquery
-//= require jquery_ujs
 //= require_tree .
 
 function addDestiantion(i, destination) {
@@ -22,8 +21,9 @@ function addDestiantion(i, destination) {
   var mapOptions = {
     center: latLng,
     disableDefaultUI: true,
-    zoom: 6,
+    zoom: 7,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel: false,
     streetViewControl: true,
     zoomControl: true
   };
