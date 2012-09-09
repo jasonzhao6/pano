@@ -5,7 +5,8 @@
 // the compiled file.
 //
 //= require jquery
-//= require_tree .
+//= require chosen.jquery
+//= require_self
 
 function addDestiantion(i, destination) {
   i++;
