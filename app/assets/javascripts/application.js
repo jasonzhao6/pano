@@ -16,7 +16,11 @@ function addDestiantion(i, destination) {
   var pitch = parseFloat(destination.pitch);
   var zoom = parseInt(destination.zoom);
   
-  $('#heading' + i).html(destination.state + ', ' + destination.country + '<small>' + destination.latitude + ', ' + destination.longitude + '</small>');
+  var label = destination.state + ', ' + destination.country + '<small>' + destination.latitude + ', ' + destination.longitude + '</small>';
+  if (destination.city !== '') {
+    label = destination.city + ', ' + label;
+  }
+  $('#heading' + i).html(label);
   
   var latLng = new google.maps.LatLng(lat, lng);
   var mapOptions = {
