@@ -27,7 +27,10 @@ namespace :scrape do
         entry['pano_id'] = panoid
         entry['city'], entry['state'], entry['country'] = location.split(', ').unshift('')[-3..-1]
         
-        p Destination.create entry unless Destination.find_by_pano_id panoid
+        # insert if has country and does not already exist
+        unless entry['country'].blank? || Destination.find_by_pano_id panoid
+          p Destination.create entry
+        end
       end
     end while page = page.link_with(text: 'Next »').try(:click)
       
