@@ -1,11 +1,10 @@
-.center
+.container
   - (1..Destination.per_page).each do |i|
     .destination
       .heading{id: "heading#{i}"}
       .map{id: "map#{i}"}
       .pano{id: "pano#{i}"}
-  #pagination
-    = will_paginate @posts, id: 'pagination', class: 'pagination-centered', previous_label: '←', next_label: '→', inner_window: 1, outer_window: 0
+  = will_paginate @posts, previous_label: '←', next_label: '→', inner_window: 2, outer_window: 0
 
 :javascript
   $(function() {

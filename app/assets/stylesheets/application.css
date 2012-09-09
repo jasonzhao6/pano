@@ -6,24 +6,20 @@
  *= require_tree . 
 */
 
-body {
-  font-family: Arial, sans-serif;
-}
-.center {
+.container {
   margin: 20px auto 0;
   width: 830px;
 }
-.heading {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
 .destination {
-  overflow: hidden;
+  margin-bottom: 20px;
+}
+.heading {
+  font-size: 24px;
+  margin-bottom: 12px;
 }
 .map, .pano {
   display: inline-block;
   height: 200px;
-  margin-bottom: 20px;
 }
 .map {
   width: 210px;
@@ -31,14 +27,4 @@ body {
 .pano {
   margin-left: 15px;
   width: 600px;
-}
-#pagination {
-  margin-bottom: 20px;
-  text-align: center;
-}
-#pagination a, #pagination em, #pagination span {
-  display: inline-block;
-  font-size: 2em;
-  text-decoration: none;
-  width: 30px;
 }

@@ -1,0 +1,13 @@
+.pagination {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.pagination a, .pagination em, .pagination span {
+  display: inline-block;
+  font-size: 20px;
+  font-style: normal;
+  height: 24px;
+  padding-top: 6px;
+  text-decoration: none;
+  width: 30px;
+}
