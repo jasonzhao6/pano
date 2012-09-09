@@ -16,7 +16,7 @@ function addDestiantion(i, destination) {
   var pitch = parseFloat(destination.pitch);
   var zoom = parseInt(destination.zoom);
   
-  $('#heading' + i).text(destination.state + ' (' + destination.latitude + ', ' + destination.longitude + ')');
+  $('#heading' + i).html(destination.state + ', ' + destination.country + '<small>' + destination.latitude + ', ' + destination.longitude + '</small>');
   
   var latLng = new google.maps.LatLng(lat, lng);
   var mapOptions = {

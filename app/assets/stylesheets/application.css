@@ -12,12 +12,24 @@
   margin: 20px auto 0;
   width: 830px;
 }
+#countries_chzn {
+  float: right;
+  margin-bottom: 20px;
+}
+.clearfix {
+  clear: both;
+}
 .destination {
   margin-bottom: 20px;
 }
 .heading {
   font-size: 24px;
   margin-bottom: 12px;
+}
+.heading small {
+  color: #bbb;
+  font-size: 18px;
+  margin-left: 10px;
 }
 .map, .pano {
   display: inline-block;
