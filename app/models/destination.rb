@@ -1,5 +1,5 @@
 class Destination < ActiveRecord::Base
-  scope :for_js, select: [:latitude, :longitude, :heading, :pitch, :zoom, :city, :state, :country], order: 'latitude DESC'
+  scope :countries, select: ['DISTINCT country', 'COUNT(*) AS cnt'], group: 'country', order: 'country ASC'
   
   self.per_page = 8
   

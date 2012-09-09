@@ -1,7 +1,8 @@
 class DestinationsController < ApplicationController
   
   def index
-    @destinations = Destination.where(country: 'Italy').for_js.paginate(page: params[:page])
+    @countries = Destination.countries
+    @destinations = Destination.where(country: 'Italy').paginate(page: params[:page])
   end
   
 end
