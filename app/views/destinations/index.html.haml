@@ -2,8 +2,7 @@
   %select#countries{'data-placeholder' => 'Choose a country...', :style => "width:260px;", :tabindex => "1"}
     %option
     - @countries.each do |i|
-      %option{:value => i.country, :selected => (i.country == params[:country] ? 'selected' : nil)}
-        = "#{i.country} (#{i.cnt} panos)"
+      %option{:value => i.country, :selected => (i.country == params[:country] ? 'selected' : nil)}= "#{i.country} (#{i.cnt} panos)"
   .clearfix
   - (1..@destinations.length).each do |i|
     .destination
