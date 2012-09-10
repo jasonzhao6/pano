@@ -28,7 +28,7 @@ namespace :scrape do
         entry['city'], entry['state'], entry['country'] = location.split(', ').unshift('')[-3..-1]
         
         # insert if has country and does not already exist
-        unless entry['country'].blank? || Destination.find_by_pano_id panoid
+        unless entry['country'].blank? || Destination.find_by_pano_id(panoid)
           p Destination.create entry
         end
       end

@@ -1,4 +1,4 @@
-MapCrunchClone::Application.routes.draw do
+Pano::Application.routes.draw do
 
   root :to => 'destinations#index'
 

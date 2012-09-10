@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MapCrunchClone::Application.load_tasks
+Pano::Application.load_tasks

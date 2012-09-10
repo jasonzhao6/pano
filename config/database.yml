@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: mapcrunch_clone_development
+  database: pano_development
   pool: 5
   username: postgres
   password:
@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: mapcrunch_clone_test
+  database: pano_test
   pool: 5
   username: postgres
   password:
@@ -49,7 +49,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: mapcrunch_clone_production
+  database: pano_production
   pool: 5
   username: postgres
   password:
