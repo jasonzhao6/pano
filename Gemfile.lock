@@ -127,7 +127,7 @@ GEM
       unf_ext
     unf_ext (0.0.4)
     webrobots (0.0.13)
-    will_paginate (3.0.3)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
